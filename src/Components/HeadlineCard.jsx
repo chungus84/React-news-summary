@@ -1,8 +1,7 @@
-const HeadlineCard = (props) => {
+import PropTypes from 'prop-types';
 
-    const { newsData } = props;
-    const thumbnail = newsData.thumbnail;
-    const headline = newsData.headline;
+const HeadlineCard = ({ newsData: { thumbnail, headline } }) => {
+
     return (
         <div className="card" style={{ width: '60%' }}>
             <img src={thumbnail} alt="Image of man" className="card-img-top" />
@@ -12,6 +11,15 @@ const HeadlineCard = (props) => {
             </div>
         </div>
     )
+}
+
+HeadlineCard.propTypes = {
+    newsData: PropTypes.exact({
+        thumbnail: PropTypes.string.isRequired,
+        headline: PropTypes.string.isRequired,
+        byline: PropTypes.string.isRequired,
+        bodyText: PropTypes.string.isRequired
+    })
 }
 
 export default HeadlineCard;
