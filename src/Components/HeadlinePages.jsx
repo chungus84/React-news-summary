@@ -17,6 +17,10 @@ const HeadlinePages = ({ newsData }) => {
     );
 };
 
+HeadlinePages.defaultProps = {
+    newsData: [],
+}
+
 HeadlinePages.propTypes = {
     newsData: PropTypes.arrayOf(
         PropTypes.object,

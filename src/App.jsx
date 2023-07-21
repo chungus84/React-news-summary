@@ -5,7 +5,7 @@ import HeadlinePages from './Components/HeadlinePages'
 import newsData from '../mockNewsData.json'
 
 function App() {
-    const results = newsData.mockApiResponse.response.results
+    const results = newsData.response.results
 
 
     return (
