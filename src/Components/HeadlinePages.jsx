@@ -9,8 +9,8 @@ const HeadlinePages = () => {
 
     return (
         <>
-            <h1 className="py-1">Headlines</h1>
-            <div className="row" style={{ justifyContent: 'center' }}>
+            <h1 className="py-2  ">Headlines</h1>
+            <div className="row mb-2 pb-2" style={{ justifyContent: 'center' }}>
                 {results}
             </div>
 
