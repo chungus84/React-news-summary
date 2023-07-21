@@ -4,7 +4,7 @@ import newsData from '../../mockNewsData.json'
 
 const HeadlinePages = () => {
 
-    const results = newsData.mockApiResponse.response.results.map(newsItem => <HeadlineCard key={newsItem.id} balloon={newsItem} />);
+    const results = newsData.mockApiResponse.response.results.map(newsItem => <HeadlineCard key={newsItem.id.replaceAll('/', '-')} newsData={newsItem.fields} />);
 
 
     return (
