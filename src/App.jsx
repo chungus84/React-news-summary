@@ -12,11 +12,12 @@ function App() {
 
     const getData = async () => {
         const data = await getNews();
-        // console.log(data)
+        console.log(data)
         if (data instanceof Error) {
             setNews([]);
         } else {
             setNews(data);
+            // console.log(data);
         }
     }
 
