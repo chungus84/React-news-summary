@@ -3,7 +3,7 @@ import axios from 'axios';
 const host = 'localhost';
 const port = 3000;
 
-console.log(import.meta.env.VITE_GUARDIAN_URI)
+// console.log(import.meta.env.VITE_GUARDIAN_URI)
 
 
 export const getNews = async () => {

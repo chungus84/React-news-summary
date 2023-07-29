@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 const HeadlineCard = ({ newsData: { thumbnail, headline } }) => {
 
     return (
-        <div className="card my-2" style={{ width: '100%' }}>
+        <div className="card my-2  col-md-6 col-sm-12" >
             <img src={thumbnail} alt={headline} className="card-img-top" />
             <div className="card-body">
                 <h5 className="card-title">{headline}</h5>
             </div>
-        </div>
+        </div >
     )
 }
 
