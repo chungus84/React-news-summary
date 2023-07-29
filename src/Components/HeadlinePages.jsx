@@ -19,14 +19,11 @@ const HeadlinePages = ({ newsData }) => {
         <>
             <h1 className="py-2  ">Headlines</h1>
             <div className="" >
-                <div className="row row-cols-2" style={{ justifyContent: 'center' }}>
+                <div className="row row-cols-sm-auto" style={{ justifyContent: 'center' }}>
                     {results}
                 </div>
             </div>
-
-
         </>
-
     );
 };
 

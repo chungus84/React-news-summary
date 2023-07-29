@@ -7,7 +7,7 @@ const HeadlineCard = ({ newsData: { id, webUrl, fields } }) => {
 
     return (
 
-        <div className="card my-2  col-md-6 col-sm-12" onClick={() => navigate(`/summary/${id.replaceAll('/', '-')}`)}>
+        <div className="card col-lg-6 col-sm-12 col-xs-12" onClick={() => navigate(`/summary/${id.replaceAll('/', '-')}`)}>
             <img src={fields.thumbnail} alt={fields.headline} className="card-img-top" />
             <div className="card-body">
                 <h5 className="card-title">{fields.headline}</h5>

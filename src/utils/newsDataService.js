@@ -18,7 +18,7 @@ export const getNews = async () => {
     }
 }
 
-const formatResponse = (resData) => {
+export const formatResponse = (resData) => {
     try {
         return resData.data.response.results
     }
