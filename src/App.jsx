@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react'
+import { Route, Routes } from 'react-router-dom';
 import Header from './Components/Header'
 import './App.css'
 import Footer from './Components/Footer'
 import HeadlinePages from './Components/HeadlinePages'
 // import newsData from '../mockNewsData.json'
 import { getNews } from './utils/newsDataService';
+import NewsSummary from './Components/NewsSummary';
 
 function App() {
 
@@ -34,9 +36,10 @@ function App() {
     return (
         <div className='container'>
             <Header />
-            <div className="container">
-                <HeadlinePages newsData={news} />
-            </div>
+            <Routes>
+                <Route path="/" element={<HeadlinePages newsData={news} />} />
+                <Route path="/summary/:id" element={<NewsSummary newsData={news} />} />
+            </Routes>
             <Footer />
         </div>
     )

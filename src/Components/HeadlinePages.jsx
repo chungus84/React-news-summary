@@ -13,7 +13,7 @@ const HeadlinePages = ({ newsData }) => {
 
     // call(newsData).then((res => console.log(res.val)));
 
-    const results = newsData.map(newsItem => <HeadlineCard key={newsItem.id.replaceAll('/', '-')} newsData={newsItem.fields} />);
+    const results = newsData.map(newsItem => <HeadlineCard key={newsItem.id.replaceAll('/', '-')} newsData={newsItem} />);
 
     return (
         <>
