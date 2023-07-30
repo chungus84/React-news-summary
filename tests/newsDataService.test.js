@@ -59,5 +59,45 @@ describe('newsDataServices tests', () => {
             expect(result).toBe(error);
         })
     });
+    describe('formatResponse tests', () => {
+        it('should return correctly formatted data via responseData.data.response.results', () => {
 
+            const mockData = {
+                data: {
+                    response: {
+                        results: [
+                            {},
+                            {},
+                            {}
+                        ]
+                    }
+                }
+
+            }
+
+
+            const result = formatResponse(mockData);
+
+            console.log(result);
+
+
+            expect(result).toEqual(mockData.data.response.results);
+        })
+
+        it('should be should be caught in the try catch and return data via responseData.data.results', () => {
+            const mockData = {
+                data: {
+                    results: [
+                        {},
+                        {},
+                        {},
+                    ]
+                }
+            }
+
+            const result = formatResponse(mockData);
+
+            expect(result).toEqual(mockData.data.results)
+        })
+    })
 })

@@ -36,10 +36,13 @@ function App() {
     return (
         <div className='container'>
             <Header />
-            <Routes>
-                <Route path="/" element={<HeadlinePages newsData={news} />} />
-                <Route path="/summary/:id" element={<NewsSummary newsData={news} />} />
-            </Routes>
+            <div className="container">
+                <Routes>
+                    <Route path="/" element={<HeadlinePages newsData={news} />} />
+                    <Route path="/summary/:id" element={<NewsSummary newsData={news} />} />
+                </Routes>
+
+            </div>
             <Footer />
         </div>
     )

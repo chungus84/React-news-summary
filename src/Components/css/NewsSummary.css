@@ -1,0 +1,16 @@
+img {
+    width: 100%
+}
+
+article>a {
+    text-decoration: none;
+    color: rgb(39, 40, 41);
+}
+
+article>a:hover {
+    color: rgb(128, 98, 214);
+}
+
+article {
+    height: 100%;
+}
