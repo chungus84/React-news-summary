@@ -8,7 +8,6 @@ const NewsSummary = ({ newsData }) => {
     const id = useParams()
     const navigate = useNavigate();
 
-
     const article = newsData.find(newsItem => {
         return newsItem.id.replaceAll('/', '-') === id.id;
     })
@@ -29,8 +28,6 @@ const NewsSummary = ({ newsData }) => {
                 <p>Article by: {article.fields.byline}</p>
                 <p>{article.fields.bodyText}</p>
             </article>
-
-
         </>
     )
 }

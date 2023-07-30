@@ -18,10 +18,9 @@ const HeadlinePages = ({ newsData }) => {
     return (
         <>
             <h1 className="py-2  ">Headlines</h1>
-            <div className="" >
-                <div className="row row-cols-sm-auto justify-content-around">
-                    {results}
-                </div>
+
+            <div className="row row-cols-sm-auto justify-content-around">
+                {results}
             </div>
         </>
     );
