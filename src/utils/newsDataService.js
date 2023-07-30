@@ -1,15 +1,16 @@
 import axios from 'axios';
 
-const host = 'localhost';
-const port = 3000;
+const HOST = import.meta.env.VITE_HOST;
+const PORT = import.meta.env.VITE_PORT;
 
-// console.log(import.meta.env.VITE_GUARDIAN_URI)
-
+// Guardian API
+const GUARDIAN_HOST = import.meta.env.VITE_GUARDIAN_URI;
+const API_KEY = import.meta.env.VITE_GUARDIAN_API_KEY;
 
 export const getNews = async () => {
     try {
-        // const responseData = await axios.get(`${import.meta.env.VITE_GUARDIAN_URI}${import.meta.env.VITE_GUARDIAN_API_KEY}`);
-        const responseData = await axios.get(`http://${host}:${port}/response`)
+        const responseData = await axios.get(`${GUARDIAN_HOST}${API_KEY}`);
+        // const responseData = await axios.get(`http://${HOST}:${PORT}/response`);
         const res = formatResponse(responseData);
         return res;
     }

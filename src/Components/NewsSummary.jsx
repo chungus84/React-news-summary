@@ -8,10 +8,13 @@ const NewsSummary = ({ newsData }) => {
     const id = useParams()
     const navigate = useNavigate();
 
+
     const article = newsData.find(newsItem => {
-        return newsItem.id.replaceAll('/', '-') === id.id;
+        return newsItem.id.replaceAll(`/`, `-`) === id.id;
     })
-    console.log(article);
+
+    const altText = article.fields.thumbnail ? article.fields.headline : `No thumbnail supplied`
+    const thumbnailImage = article.fields.thumbnail ? article.fields.thumbnail : defaultImage;
 
     return (
         <>
@@ -23,8 +26,8 @@ const NewsSummary = ({ newsData }) => {
                     <h1>{article.fields.headline} Summery</h1>
                 </a>
                 <p className="text-muted">Click on headline for full article</p>
-                <button class="btn btn-primary my-3" onClick={() => navigate('/')}>Back to Headlines</button>
-                <img src={article.fields.thumbnail ? article.fields.thumbnail : defaultImage} alt={article.fields.headline} />
+                <button className="btn btn-primary my-3" onClick={() => navigate(`/`)}>Back to Headlines</button>
+                <img src={thumbnailImage} alt={altText} />
                 <p>Article by: {article.fields.byline}</p>
                 <p>{article.fields.bodyText}</p>
             </article>
